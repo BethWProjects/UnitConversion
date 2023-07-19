@@ -85,7 +85,7 @@ body {
     color: #353535;
     text-align: center;
     margin: auto;
-    margin-top: 10px;
+    padding-top: 10px;
     font-family: Inter;
     font-size: 0.875rem;
     font-style: normal;
@@ -101,9 +101,15 @@ body {
         width: 80vw;
     }
     .p-title {
-        width: 70vw;
+        width: 80vw;
     }
     .p-conversion {
         width: 70vw;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .p-title {
+        padding-bottom: 10px;
     }
 }
