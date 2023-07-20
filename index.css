@@ -123,3 +123,39 @@ body {
         padding-bottom: 10px;
     }
 }
+
+.light-mode {
+    background-color: #1F2937;
+  }
+
+.section-light-mode {
+    background: #273549;
+}
+
+.light-mode-title {
+    color: #CCC1FF;
+}
+
+.light-mode-conversion {
+    color: #FFF;
+}
+
+.light-mode-toggle {
+    color: #000;
+}
+
+#theme-switch {
+    margin: 20px 20px 0px auto;
+    padding: 9px 17px 9px 15px;
+    border-radius: 6px;
+    border: none;
+    background: #1F2937;
+    color: var(--white, #FFF);
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+#theme-switch:hover {
+    cursor: pointer;
+}

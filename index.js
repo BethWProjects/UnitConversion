@@ -5,12 +5,14 @@
 */
 
 //query selector
-const convertBtn = document.getElementById("convert-btn");
-const inputEl = document.getElementById("input");
-const lengthEl = document.getElementById("length");
-const volumeEl = document.getElementById("volume");
-const massEl = document.getElementById("mass");
-const helperEl = document.getElementById("helper-text");
+const convertBtn = document.getElementById("convert-btn")
+const inputEl = document.getElementById("input")
+const lengthEl = document.getElementById("length")
+const volumeEl = document.getElementById("volume")
+const massEl = document.getElementById("mass")
+const helperEl = document.getElementById("helper-text")
+const themeSwitch = document.querySelector("#theme-switch")
+let toggleDark = false;
 
 //event listener
 
@@ -28,7 +30,7 @@ inputEl.addEventListener("input", function() {
     if (decimalCount > 1) {
         this.value = this.value.replace(/\.(?=.*\.)/g, "");
     }
-    
+
     if (inputEl.value.length > 0) {
         convertBtn.disabled = false;
     } else {
@@ -71,4 +73,22 @@ function convertUnits() {
         <p>${inputEl.value} kilos = ${pound.toFixed(3)} pounds | ${inputEl.value} pounds = ${kilogram.toFixed(3)} kilos</p>
     `
     inputEl.value = "";
+}
+
+function setLightDarkMode() {
+    const body = document.body;
+    body.classList.toggle('light-mode');
+    const sections = document.querySelectorAll('.section');
+    sections.forEach(section => section.classList.toggle('section-light-mode'));
+    const pTitle = document.querySelectorAll('.p-title');
+    pTitle.forEach(title => title.classList.toggle('light-mode-title'));
+    const pConversion = document.querySelectorAll('.p-conversion');
+    pConversion.forEach(conversion => conversion.classList.toggle('light-mode-conversion'));
+    if (toggleDark === true) {
+        themeSwitch.textContent = "🌙";
+        toggleDark = false;
+    } else {
+        themeSwitch.textContent = "☀️";
+        toggleDark = true;
+    }
 }
