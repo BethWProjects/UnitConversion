@@ -12,7 +12,8 @@
 <body>
     <header id="header-id">
         <h1 id="title">Metric/Imperial Unit Conversion</h1>
-        <input type="text" id="input">
+        <input type="text" id="input" maxLength="3" pattern="[0-9]*">
+        <p id="helper-text"></p>
         <button id="convert-btn">Convert</button>
     </header>
     <main id="main-id">

@@ -31,7 +31,7 @@ body {
     height: 83px;
     border-radius: 5px;
     border: 2px solid #B295FF;
-    margin-bottom: 25px;
+    margin-bottom: 5px;
     color: #FFF;
     text-align: center;
     font-family: Inter;
@@ -42,9 +42,14 @@ body {
     background: #6943FF;
     }
 
+#helper-text {
+    margin: 0 auto 5px auto;
+    color: rgb(246, 173, 187);
+}
+
 #convert-btn {
     display: block;
-    margin: auto;
+    margin: 20px auto 0 auto;
     padding: 9px 27.5px;
     border-radius: 5px;
     background: #FFF;
@@ -55,6 +60,11 @@ body {
     font-style: normal;
     font-weight: 500;
     line-height: 24px;
+}
+
+#convert-btn:hover {
+    background: #EAEAEA;
+    cursor: pointer;
 }
 
 .section {

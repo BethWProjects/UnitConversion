@@ -10,11 +10,46 @@ const inputEl = document.getElementById("input");
 const lengthEl = document.getElementById("length");
 const volumeEl = document.getElementById("volume");
 const massEl = document.getElementById("mass");
+const helperEl = document.getElementById("helper-text");
+
 //event listener
 
+document.addEventListener("DOMContentLoaded", function() {
+    emptyInput();
+});
+
+convertBtn.disabled = true; //setting button state to disabled
+
+inputEl.addEventListener("input", function() {
+    this.value = this.value.replace(/[^\d.]/g, "");
+
+    // Ensure there's only one decimal point in the input
+    const decimalCount = (this.value.match(/\./g) || []).length;
+    if (decimalCount > 1) {
+        this.value = this.value.replace(/\.(?=.*\.)/g, "");
+    }
+    
+    if (inputEl.value.length > 0) {
+        convertBtn.disabled = false;
+    } else {
+        convertBtn.disabled = true;
+    }
+    emptyInput()
+})
+
+function emptyInput() {
+    const helper = "Please enter a value"
+    if (inputEl.value.length === 0) {
+        helperEl.innerHTML = helper
+    } else {
+        helperEl.innerHTML = ""
+    }
+}
 
 convertBtn.addEventListener("click", function() {
-   convertUnits()
+    convertUnits()
+    emptyInput()
+
 })
 
 function convertUnits() {
