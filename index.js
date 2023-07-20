@@ -14,6 +14,10 @@ const massEl = document.getElementById("mass");
 
 
 convertBtn.addEventListener("click", function() {
+   convertUnits()
+})
+
+function convertUnits() {
     let input = inputEl.value;
     const feet = input * 3.281;
     const meters = input / 3.281;
@@ -32,6 +36,4 @@ convertBtn.addEventListener("click", function() {
         <p>${inputEl.value} kilos = ${pound.toFixed(3)} pounds | ${inputEl.value} pounds = ${kilogram.toFixed(3)} kilos</p>
     `
     inputEl.value = "";
-    
-})
-
+}
