@@ -1,7 +1,7 @@
 # Metric/Imperial Unit Conversion
 
 ## Overview
-In this challenge, I created a Metric/Imperial Unit Conversion calculator for length, volume and mass. I incorporated helper text and limited characters other than decimals and numbers in the input field.  The user can toggle light/dark mode. I utilized HTML, CSS and Javascript skills.
+In this challenge, I created a Metric/Imperial Unit Conversion calculator for length, volume and mass. I incorporated helper text and limited characters to decimals and numbers in the input field.  The user can toggle light/dark mode. The application passes with 100% rating for performance, accessibility, SEO and Best Practices.  I utilized HTML, CSS and Javascript skills.
 
 ## Deployed Link
 Check out my Metric/Imperial Unit Conversion project here!
