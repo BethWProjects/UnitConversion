@@ -15,7 +15,7 @@ Deployed using ![Vercel](https://img.shields.io/badge/vercel-%23000000.svg?style
 ![Javascript](https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E) |
 ![Figma](https://img.shields.io/badge/figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white) 
 
-[Figma Design](https://www.figma.com/file/t3JrnXwKmUXAKE3F8BUNSB/Unit-Conversion-(Copy)?node-id=41105%3A1271&mode=dev)
+Figma Design: [Figma link](https://www.figma.com/file/t3JrnXwKmUXAKE3F8BUNSB/Unit-Conversion-(Copy)?node-id=41105%3A1271&mode=dev)
 
 ## Contributors
 Beth Wilson [github](https://github.com/BethWProjects) | [LinkedIn](https://www.linkedin.com/in/beth-wilson-92594284/)
