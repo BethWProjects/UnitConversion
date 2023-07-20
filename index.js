@@ -12,12 +12,13 @@ const volumeEl = document.getElementById("volume")
 const massEl = document.getElementById("mass")
 const helperEl = document.getElementById("helper-text")
 const themeSwitch = document.querySelector("#theme-switch")
-let toggleDark = false;
+let toggleDark = true;
 
 //event listener
 
 document.addEventListener("DOMContentLoaded", function() {
     emptyInput();
+    setLightDarkMode()
 });
 
 convertBtn.disabled = true; //setting button state to disabled
@@ -83,10 +84,10 @@ function setLightDarkMode() {
     const pConversion = document.querySelectorAll('.p-conversion');
     pConversion.forEach(conversion => conversion.classList.toggle('light-mode-conversion'));
     if (toggleDark === true) {
-        themeSwitch.textContent = "🌙";
+        themeSwitch.textContent = "☀️";
         toggleDark = false;
     } else {
-        themeSwitch.textContent = "☀️";
+        themeSwitch.textContent = "🌙";
         toggleDark = true;
     }
 }

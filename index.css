@@ -45,6 +45,7 @@ body {
 #helper-text {
     margin: 0 auto 5px auto;
     color: rgb(246, 173, 187);
+    font-size: .85rem;
 }
 
 #convert-btn {
