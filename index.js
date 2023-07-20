@@ -24,19 +24,24 @@ document.addEventListener("DOMContentLoaded", function() {
 convertBtn.disabled = true; //setting button state to disabled
 
 inputEl.addEventListener("input", function() {
+    // Remove any non-numeric and non-decimal characters from the input
+    this.value = this.value.replace(/[^\d.]/g, "");
+
     // Ensure there's only one decimal point in the input
     const decimalCount = (this.value.match(/\./g) || []).length;
     if (decimalCount > 1) {
         this.value = this.value.replace(/\.(?=.*\.)/g, "");
     }
 
-    if (inputEl.value.length === 0 || inputEl.value === "0" || inputEl.value === "0." || inputEl.value === ".0" || inputEl.value === "0.0" || inputEl.value ===".") {
+    if (this.value.length === 0 || this.value === "0" || this.value === "0." || this.value === ".0" || this.value === "0.0" || this.value === ".") {
         convertBtn.disabled = true;
     } else {
-        convertBtn.disabled = false
+        convertBtn.disabled = false;
     }
-    emptyInput()
-})
+
+    emptyInput();
+});
+
 
 function emptyInput() {
     const helper = "Please enter a value"
@@ -52,6 +57,7 @@ convertBtn.addEventListener("click", function() {
     emptyInput()
 
 })
+
 
 function convertUnits() {
     let input = inputEl.value;
@@ -71,6 +77,10 @@ function convertUnits() {
     massEl.innerHTML = `
         <p>${inputEl.value} kilos = ${pound.toFixed(3)} pounds | ${inputEl.value} pounds = ${kilogram.toFixed(3)} kilos</p>
     `
+    clearInput()
+}
+
+function clearInput() {
     inputEl.value = "";
 }
 
